@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cloud Services Assignment</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        background: #f4f6f8;
+        color: #222;
+      }
+
+      header {
+        background: #1f2937;
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+      }
+
+      section {
+        background: white;
+        padding: 25px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      h2 {
+        color: #1f2937;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+      }
+
+      h3 {
+        color: #374151;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background: #eee;
+      }
+
+      code {
+        background: #eee;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+
+      .media {
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      a {
+        color: #2563eb;
+      }
+
+      footer {
+        text-align: center;
+        color: #666;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Cloud Services Assignment</h1>
+      <p>
+        Deployment of a web application using CSC Rahti and media storage using
+        CSC Allas.
+      </p>
+    </header>
+
+    <section>
+      <h2>1. Cloud-Based Email and Calendar Services</h2>
+
+      <p>
+        Many companies use cloud-based email and calendar services because they
+        reduce the need to maintain their own messaging infrastructure. Instead
+        of operating mail servers, storage systems and backup infrastructure
+        themselves, companies can use services provided by large cloud
+        providers.
+      </p>
+
+      <p>
+        A major advantage is scalability. Cloud services can support both small
+        organizations and large enterprises without requiring the company to
+        purchase additional physical hardware.
+      </p>
+
+      <p>
+        Cloud services also provide accessibility. Employees can access email
+        and calendars from different locations and devices using an Internet
+        connection. This is particularly useful for remote and hybrid work.
+      </p>
+
+      <p>
+        Another benefit is reduced maintenance. The cloud provider is
+        responsible for much of the server maintenance, software updates,
+        infrastructure availability and security.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Amazon Glacier</h2>
+
+      <p>
+        A mid-size company could use Amazon S3 Glacier storage classes for data
+        that needs to be retained for a long time but is rarely accessed.
+      </p>
+
+      <p>
+        Examples include old backups, historical business documents, financial
+        records, archived emails, application logs and older media files.
+      </p>
+
+      <p>
+        Glacier should generally not be used for data that needs to be accessed
+        frequently or immediately, such as active databases, frequently used
+        website files or current application data.
+      </p>
+
+      <p>
+        The main advantage of archive storage is the lower storage cost. The
+        trade-off is that retrieving archived data can take longer and may
+        involve additional retrieval costs.
+      </p>
+
+      <h3>Other cloud storage providers</h3>
+
+      <ul>
+        <li>Amazon Web Services – Amazon S3</li>
+        <li>Microsoft Azure – Blob Storage</li>
+        <li>Google Cloud – Cloud Storage</li>
+        <li>Backblaze – B2 Cloud Storage</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Comparison of Cloud Storage Providers</h2>
+
+      <table>
+        <tr>
+          <th>Provider</th>
+          <th>Service</th>
+          <th>Main Characteristics</th>
+        </tr>
+
+        <tr>
+          <td>AWS</td>
+          <td>Amazon S3</td>
+          <td>
+            Scalable object storage with different storage classes for
+            frequently and rarely accessed data.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Microsoft Azure</td>
+          <td>Blob Storage</td>
+          <td>
+            Hot, Cool, Cold and Archive tiers for different access patterns.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Google Cloud</td>
+          <td>Cloud Storage</td>
+          <td>
+            Multiple storage classes including Standard, Nearline, Coldline and
+            Archive.
+          </td>
+        </tr>
+
+        <tr>
+          <td>Backblaze</td>
+          <td>B2 Cloud Storage</td>
+          <td>
+            Object storage focused on backup and general cloud storage use
+            cases.
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        The most suitable provider depends on storage capacity, access
+        frequency, geographical requirements, retrieval needs, data transfer
+        costs and integration with other cloud services.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Own Web Server vs IaaS, PaaS and SaaS</h2>
+
+      <p>
+        Maintaining an own physical web server can be appropriate when an
+        organization requires full control over its hardware, network
+        environment or data location. It can also be useful when an organization
+        already has suitable infrastructure and technical expertise.
+      </p>
+
+      <p>
+        However, maintaining physical infrastructure requires responsibility for
+        hardware failures, operating system updates, security, backups,
+        networking, electricity and system administration.
+      </p>
+
+      <p>
+        IaaS provides virtual machines while the cloud provider manages the
+        underlying physical infrastructure. The customer is still responsible
+        for the operating system and applications.
+      </p>
+
+      <p>
+        PaaS provides a higher level of abstraction. Developers can deploy
+        applications without managing most of the underlying infrastructure.
+        This can make development and deployment faster.
+      </p>
+
+      <p>
+        SaaS provides a complete software application managed by the provider.
+        It is commonly used for services such as email, collaboration and
+        customer relationship management.
+      </p>
+
+      <p>
+        The choice depends on the required level of control, responsibility,
+        flexibility, cost, scalability and technical expertise.
+      </p>
+    </section>
+
+    <section>
+      <h2>Implementation</h2>
+
+      <p>
+        This web application was deployed using
+        <strong>CSC Rahti</strong> as the PaaS platform. The source code is
+        stored in GitHub.
+      </p>
+
+      <p>
+        Media files used by the webpage are stored separately in
+        <strong>CSC Allas</strong>, which provides S3-compatible object storage.
+      </p>
+
+      <h3>Deployment process</h3>
+
+      <ol>
+        <li>The source code was stored in a GitHub repository.</li>
+        <li>The web application was deployed to CSC Rahti.</li>
+        <li>Media files were uploaded to CSC Allas.</li>
+        <li>The webpage was configured to access the media from Allas.</li>
+        <li>The final application was tested through its public URL.</li>
+      </ol>
+
+      <p>
+        <strong>GitHub repository:</strong>
+        <a href="https://github.com/pochkisell/dz2">
+          https://github.com/pochkisell/dz2
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Screenshots and Media</h2>
+
+      <p>
+        The following screenshots document the deployment and storage
+        configuration used during the assignment.
+      </p>
+
+      <!-- Replace these URLs with your actual Allas object URLs -->
+
+      <img
+        class="media"
+        src="YOUR_ALLAS_IMAGE_URL"
+        alt="CSC Rahti deployment screenshot"
+      />
+
+      <img
+        class="media"
+        src="YOUR_ALLAS_IMAGE_URL"
+        alt="CSC Allas storage screenshot"
+      />
+
+      <img
+        class="media"
+        src="YOUR_ALLAS_IMAGE_URL"
+        alt="Deployed webpage screenshot"
+      />
+    </section>
+
+    <footer>
+      <p>Cloud Services Assignment — CSC Rahti + CSC Allas</p>
+    </footer>
+  </body>
+</html>
